@@ -1,0 +1,173 @@
+							String Functionsd
+						     **********************
+Contant
+^^^^^^^
+1 - assign
+2-getline(cin,x)
+3- S.at( رقم ال اندكس بتاع البوزيشن بتاع ال حرف اللي هطبعه ف ال سترينج
+4- S.length()  // Used to get the length of the string 
+5-S.size() // like length 
+6- Note that in the arrays 
+7- S.substr(اخر اندكس ابدا اخده,اول اندكس اخده) 
+8- s.swap(y) ; // ابدل اتنين سترينج مع بعض
+9- s.find("letter") 
+10-s.erase(first position , last position)  // used to remove substring from the string
+11- s.replace()  // take 3 parameters
+12-S.insert( ,  , ) 
+13-cin.ignore() ; // to ignore any string before geline
+14- s.clear() ; // x=""   افضي ال سترينج
+15- s.push_back('الحرف اللي ها اضيفه') ك //add char last
+16 s.pop_back() //	This function remove the last character from the string.
+17-str.resize(int length)
+18- str.insert(int pos, string S)
+==========================================================================================================
+1 - assign  
+-----------
+Ex.1
+	string x = "Ahmed" ,y;
+   	y.assign(x) ;
+   	cout << y ; // Ahmed
+==========================================================================================================
+2-getline(cin,x)
+----------------
+Ex.1
+
+	string y;
+   	 getline(cin,y) ; // Mahmoud Arafat Khairy		
+   	 cout <<y ;       // Mahmoud Arafat Khairy
+Ex.2
+	 getline(cin, string S, char c)
+	 string a;
+   	 getline(cin, a); // Ahmed Mohamed Ali
+   	 cout << a; //Ahmed Mohamed Ali
+
+
+==========================================================================================================
+3- S.at( رقم ال اندكس بتاع البوزيشن بتاع ال حرف اللي هطبعه ف ال سترينج)
+------------------------------------------------
+Ex.1
+string S = "Ahmed" ;
+	How to print the (first,or secoud or thired) character in string s ?
+	cout << S.at(1) ; // h 
+==========================================================================================================
+4- S.length()  // Used to get the length of the string 
+----------------
+Ex.1
+	string S = "Ahmed" ;
+	cout << S.length() ; // 5
+==========================================================================================================
+5-S.size() // like length 
+----------------
+Ex.1
+	string s= "Ahmed" ;
+	 cout << s.size() ; // 5
+==========================================================================================================
+6- Note that in the arrays 
+----------------
+	int arr[] = {1,2,3,4} ;
+	int x = sizeof(arr) ; // 20 byte
+	int y = sizeof(arr[0] ; // 4 byte
+	int z = x/y ;   // number of element in array
+==========================================================================================================
+7- S.substr(اخر اندكس ابدا اخده,اول اندكس اخده) 
+--------------------------------
+Ex.1
+	string s= "Ahmed" ;
+ 	cout << s.substr(1,3) <<endl; // hme
+Ex.2	
+	 string s= "Ahmed123456" ;
+ 	cout << s.substr(4) <<endl; // d123456
+
+	يبدا من عند ال 4 لغايه اخر ال سترينج
+==========================================================================================================
+8- s.swap(y) ; // ابدل اتنين سترينج مع بعض
+--------------------------------
+Ex.1
+	string s= "Ahmed" ,y = "Mohamed" ;
+	 s.swap(y) ;
+ 	cout << s << "\n" << y ;  // s = Mohamed , y = Ahmed 
+==========================================================================================================
+9- s.find("letter") 
+----------------
+Ex.1	
+	string s = "Ahmedoka" ;
+	cout << s.find("m") ; // 2
+	used to print the position of the character in the string
+Note* بيدور علي الرقم من اليمين للشمال طيب لو عاوز الحرف من اليمين للشمال -
+طيب في حاله لو عاوز ادور علي حرف من الشمال لليمين ؟-
+Ex.2
+	string s = "Ahmedoka" ;
+	cout << s.rfind("m") ; // 5
+Ex.3
+	we can search about string in string 
+	String s = "Ahmed344" ;
+	cout<< s.find("me") ; // 2   --> postion of the first char in the string we search about it 
+==========================================================================================================
+10-s.erase(first position , last position)  // used to remove substring from the string
+------------------------------------------------
+Ex.1
+	string s = "Ahmed12345" ;
+	cout << s.erase(0,3) ; 		// ed12345
+	cout << s << endl ;		// ed12345   اتحذف خالص مش اتقصت من ال سترينج	
+	بيحذف من اول ال بوزيشن صفر لغايه بوزيشن اقل من البوزيشن 3 ب 1 , يعني لغايه البوزيشن 2
+
+Ex.2
+	string s = "Ahmed12345" ;
+	cout << s.erase(3) ;    	// Ahm    --> بيحذف كل الحروف اللي بعد البوزيشن ال 3 
+==========================================================================================================
+11- s.replace()  // take 3 parameters
+--------------------------------
+
+	s.replace(from where i want to replace , size of the string in want to replce  , "السترينج اللي ها ابدله")
+Ex.1
+	string s= "Ahmed12345"  ;
+   	 cout << s.replace(5,5," ali") ; //Ahmed ali 
+
+Ex.2
+		string s= "Ahmed12345"  ;
+   		cout << s.replace(s.find("1"),5," ali") ; //Ahmed ali 
+		cout << s.replace(s.find("1"),5," ali") == cout << s.replace(5,5," ali") // 5 poition of char "1"
+		**don't forget that s.find ()   // return the postion of the string or char in it 
+==========================================================================================================
+12-S.insert( ,  , ) 
+--------------------------------
+Ex.1	string s = "ahmed12345" ;
+	cout << s.insert(5," emad ") //( السترينج اللي هكتبه ,الانديكس بتاع الحرف الي هبدا منه )
+	//ahmed emad 12345
+==========================================================================================================
+13-cin.ignore() ; // to ignore any string before geline
+------------------
+Ex.1	cin.ignore() ;
+	getline(cin,x); // ahmed mohamed
+	getline(cin,x,'.') ; // cin  until specific char
+==========================================================================================================
+14- s.clear() ; // x=""   افضي ال سترينج
+---------------
+==========================================================================================================
+15- s.push_back('الحرف اللي ها اضيفه') ك //add char last
+--------------------------------
+Ex.1	s=s+'a' ---> or x+='a'  or x+=; // add char last
+	x= "a"+x ; // add char first
+==========================================================================================================
+16 s.pop_back() //	This function remove the last character from the string.
+------------------	
+Ex.1	string s = "ahmed";
+   	s.pop_back();
+   	cout << s << endl;
+==========================================================================================================
+17-str.resize(int length)
+-------------------------
+Ex.1	string a = "Mohamed";
+    	string b = "Ahmed";
+ 	a.resize(2);
+	b.resize(7);
+  	cout << b << a; // Ahmed  Mo
+==========================================================================================================
+18- str.insert(int pos, string S)
+--------------------------------
+Ex.1	string a = "Aed";
+    	a.insert(1, "hm");
+   	 cout << a;    // Ahmed
+==========================================================================================================
+19-s.begin()  // pointer and its value *x.begin()    --> used to get the first char in the string
+--------------------------------
